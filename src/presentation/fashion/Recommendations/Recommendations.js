@@ -37,7 +37,7 @@ export default {
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('email');
 
-    fetch("http://16.16.187.7:5002/contentrecommendations?email="+myParam)
+    fetch("https://16.16.187.7:5002/contentrecommendations?email="+myParam)
       .then(response => response.json())
       .then(response => {
         let str = '';
