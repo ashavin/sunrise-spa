@@ -45,7 +45,7 @@ export default {
           str = str + `"${element}"${index !== response.content_recommendations.length - 1 ? ',' : ''}`;
         });
        
-        fetch("https://api.europe-west1.gcp.commercetools.com/sunrise-spa/product-projections/search?filter=variants.sku:"+str, requestOptions)
+        fetch("https://api.europe-west1.gcp.commercetools.com/b2c_deloitte_ai/product-projections/search?filter=variants.sku:"+str, requestOptions)
         .then(response => response.json())
         .then(result => {
           this.slides = result?.results;
