@@ -3,7 +3,7 @@
 <i18n src="./Recommendations.txt" lang="yaml"></i18n>
  
 <template>
-<h3 class="recommendations-title"> XYZ </h3>
+<h3 class="recommendations-title"> Suggestion based on your order history </h3>
   <transition name="slide-fade" appear>
     <vueper-slides
       class="no-shadow"
