@@ -37,12 +37,12 @@ export default {
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('email');
 
-    fetch("https://16.16.187.7:5000/contentrecommendations?email="+myParam)
+    fetch("https://16.16.187.7:5000/collaborativerecommendations?email="+myParam)
       .then(response => response.json())
       .then(response => {
         let str = '';
-        response.content_recommendations.forEach((element, index) => {
-          str = str + `"${element}"${index !== response.content_recommendations.length - 1 ? ',' : ''}`;
+        Object.keys(response.collaborative_recommendations).forEach((element, index) => {
+          str = str + `"${element}"${index !== response.Object.keys(response.collaborative_recommendations).length - 1 ? ',' : ''}`;
         });
        
         fetch("https://api.europe-west1.gcp.commercetools.com/b2c_deloitte_ai/product-projections/search?filter=variants.sku:"+str, requestOptions)
