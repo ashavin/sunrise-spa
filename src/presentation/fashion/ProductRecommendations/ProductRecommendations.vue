@@ -3,7 +3,7 @@
 <i18n src="./ProductRecommendations.txt" lang="yaml"></i18n>
  
 <template>
-<h3 class="recommendations-title"> Users similar to you also bought </h3>
+<h3 class="recommendations-title"> Explore Hot Picks: Trending Choices from Like-minded Shoppers!</h3>
   <transition name="slide-fade" appear>
     <vueper-slides
       class="no-shadow"

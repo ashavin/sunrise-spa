@@ -35,8 +35,7 @@ export default {
       redirect: 'follow'
     };
     const urlParams = new URLSearchParams(window.location.search);
-    const myParam = urlParams.get('email');
-
+    const myParam = urlParams.get('email') || 'user1@example.com';
     fetch("https://16.16.187.7:5000/contentrecommendations?email="+myParam)
       .then(response => response.json())
       .then(response => {
