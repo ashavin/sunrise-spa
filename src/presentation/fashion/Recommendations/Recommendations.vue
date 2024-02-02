@@ -18,7 +18,10 @@
           <div
             class="single-slider bg-img align-items-center custom-d-flex "
           >
-          <img :src="slide?.masterVariant?.images?.[0]?.url" />
+          <router-link
+          :to="productRoute(product.slug, product.sku)"
+        >
+          <img :src="slide?.masterVariant?.images?.[0]?.url" /></router-link>
             <h3 class="animated">
                       {{ slide?.name?.en}}
                     </h3>
