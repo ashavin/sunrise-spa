@@ -40,12 +40,15 @@ export default {
     fetch("https://16.16.187.7:5000/collaborativerecommendations?email="+myParam)
       .then(response => response.json())
       .then(response => {
-        let str = '';
-        Object.keys(response.collaborative_recommendations).forEach((element, index) => {
-          str = str + `"${element}"${index !== response.Object.keys(response.collaborative_recommendations).length - 1 ? ',' : ''}`;
+        // Extracting keys from the collaborative_recommendations object
+        const recommendationKeys = Object.keys(response.collaborative_recommendations);
+
+        let skuString = '';
+        recommendationKeys.forEach((element, index) => {
+          skuString += `"${element}"${index !== recommendationKeys.length - 1 ? ',' : ''}`;
         });
        
-        fetch("https://api.europe-west1.gcp.commercetools.com/b2c_deloitte_ai/product-projections/search?filter=variants.sku:"+str, requestOptions)
+        fetch("https://api.europe-west1.gcp.commercetools.com/b2c_deloitte_ai/product-projections/search?filter=variants.sku:"+skuString, requestOptions)
         .then(response => response.json())
         .then(result => {
           this.slides = result?.results;
