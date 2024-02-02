@@ -21,9 +21,9 @@
             class="single-slider bg-img align-items-center custom-d-flex "
           >
           <img :src="slide?.masterVariant?.images?.[0]?.url" />
-            <h3 class="animated">
+            <h5 class="animated">
                       {{ slide?.name?.en}}
-                    </h3>
+                    </h5>
           </div>
           </a>
         </template>
