@@ -6,6 +6,7 @@
   <span>
   <Banner />
     <Recommendations />
+    <ProductRecommendations />
     <div class="banner-area pt-30">
       <div class="custom-container">
         <div class="row">

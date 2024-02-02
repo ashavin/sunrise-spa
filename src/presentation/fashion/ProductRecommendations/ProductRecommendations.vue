@@ -1,6 +1,6 @@
-<script src="./Recommendations.js" />
-<style src="./Recommendations.scss" lang="scss"></style>
-<i18n src="./Recommendations.txt" lang="yaml"></i18n>
+<script src="./ProductRecommendations.js" />
+<style src="./ProductRecommendations.scss" lang="scss"></style>
+<i18n src="./ProductRecommendations.txt" lang="yaml"></i18n>
  
 <template>
 <h3 class="recommendations-title"> XYZ </h3>
